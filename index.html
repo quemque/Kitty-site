@@ -1,22 +1,48 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="favicon/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="favicon/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="favicon/favicon-16x16.png"
+    />
+    <link rel="manifest" href="favicon/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Vollkorn:ital,wght@0,400..900;1,400..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Pixel Cat Companion</title>
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="dark-theme">
-    <div class="settings-button">⚙️</div>
+  <body>
+    <div class="app-container">
+      <div class="settings-button">⚙️</div>
 
-    <div class="cat-container">
-      <div class="pixel-cat" id="cat"></div>
+      <div class="cat-container" id="cat-container">
+        <div class="pixel-cat" id="cat"></div>
+      </div>
+
+      <div class="bottom-panel">
+        <div class="hunger-bar">
+          <div class="hunger-fill"></div>
+        </div>
+        <button class="btn-feed">Покормить</button>
+      </div>
     </div>
-
-    <div class="interaction-panel">
-      <button class="btn-feed">🍗 Feed</button>
-      <button class="btn-pet">✋ Pet</button>
-      <button class="btn-play">🎾 Play</button>
-    </div>
-
     <script src="script.js"></script>
   </body>
 </html>
