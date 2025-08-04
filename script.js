@@ -12,9 +12,28 @@ let currentState = catStates.IDLE;
 let catElement = document.getElementById("cat");
 let currentScale = 4;
 
+// Initialize
+window.addEventListener("load", () => {
+  currentState = ""; // Сбрасываем текущее состояние
+  handleResize();
+  animateCat(catStates.IDLE);
+  setTimeout(randomBehavior, 10000);
+});
+
 // Animation frames - update paths to match your files
 const animations = {
-  idle: ["img/idle1.png", "img/idle2.png", "img/idle3.png", "img/idle4.png"],
+  idle: [
+    "img/idle1.png",
+    "img/idle2.png",
+    "img/idle3.png",
+    "img/idle4.png",
+    "img/idle5.png",
+    "img/idle6.png",
+    "img/idle7.png",
+    "img/idle8.png",
+    "img/idle9.png",
+    "img/idle10.png",
+  ],
   walking: ["img/walk1.png", "img/walk2.png", "img/walk3.png", "img/walk4.png"],
   lying: ["img/lie1.png", "img/lie2.png", "img/lie3.png"],
   eating: ["img/eat1.png", "img/eat2.png", "img/eat3.png", "img/eat4.png"],
@@ -120,13 +139,6 @@ function randomBehavior() {
   }
   setTimeout(randomBehavior, 10000 + Math.random() * 10000);
 }
-
-// Initialize
-window.addEventListener("load", () => {
-  handleResize();
-  animateCat(catStates.IDLE);
-  setTimeout(randomBehavior, 10000);
-});
 
 window.addEventListener("resize", handleResize);
 
